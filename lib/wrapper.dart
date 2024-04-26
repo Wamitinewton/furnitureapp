@@ -11,6 +11,8 @@ import 'package:furnitureapp/screens/authentication/splash_screen.dart';
 import 'package:get/get.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import 'screens/home.dart';
+
 class Wrapper extends StatefulWidget {
   const Wrapper({super.key});
 
@@ -39,7 +41,7 @@ class _WrapperState extends State<Wrapper> {
       Get.put(UserController());
       Get.put(AddressController());
       Get.put(CardDetailsController());
-      Get.to(() => SplashScreen(), transition: Transition.fadeIn);
+      Get.to(() => Home(), transition: Transition.fadeIn);
     } else {
       Get.off(() => const OnBoardingWelcomeScreen());
     }
